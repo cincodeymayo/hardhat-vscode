@@ -38,7 +38,7 @@ export const onInitialize = (serverState: ServerState) => {
 
     const result: InitializeResult = {
       serverInfo: {
-        name: "Hardhat Language Server",
+        name: "Solidity Language Server",
       },
       capabilities: {
         textDocumentSync: TextDocumentSyncKind.Incremental,

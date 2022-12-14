@@ -18,7 +18,7 @@ suite("Configuration", function () {
   test("InitializeResult", () => {
     const expected = {
       serverInfo: {
-        name: "Hardhat Language Server",
+        name: "Solidity Language Server",
       },
       capabilities: {
         textDocumentSync: 2,
