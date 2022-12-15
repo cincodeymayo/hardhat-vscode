@@ -1,0 +1,47 @@
+{
+  "name": "coc-solidity-antico",
+  "description": "Solidity language server for coc.nvim by Nomic Foundation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NomicFoundation/hardhat-vscode"
+  },
+  "version": "0.6.8",
+  "keywords": [
+    "coc.nvim",
+    "solidity"
+  ],
+  "files": [
+    "out/index.js"
+  ],
+  "main": "out/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --platform=node --bundle --external:coc.nvim --external:solidity-ls-antico --outdir=out"
+  },
+  "dependencies": {
+    "solidity-ls-antico": "0.6.8"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "coc.nvim": "^0.0.80",
+    "esbuild": "^0.16.0"
+  },
+  "engines": {
+    "coc": "^0.0.80"
+  },
+  "activationEvents": [
+    "onLanguage:solidity"
+  ],
+  "contributes": {
+    "rootPatterns": [
+      {
+        "filetype": "solidity",
+        "patterns": [
+          ".git/",
+          "hardhat.config.js",
+          "hardhat.config.ts",
+          "foundry.toml"
+        ]
+      }
+    ]
+  }
+}
